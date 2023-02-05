@@ -34,8 +34,6 @@ function StacksLogin() {
 }
 
 export default function Routes() {
-  const [isSignIn, setIsSignIn] = React.useState(false);
-
   return (
     <>
       <Tab.Navigator

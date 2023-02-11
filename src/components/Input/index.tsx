@@ -13,7 +13,12 @@ const Input = ({ value, onChange, placeholder, label }: IInput) => {
   return (
     <Container>
       <Label>{label}</Label>
-      <Inputs value={value} onChange={onChange} placeholder={placeholder} />
+      <Inputs
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        placeholderTextColor="#ffffff61"
+      />
     </Container>
   );
 };

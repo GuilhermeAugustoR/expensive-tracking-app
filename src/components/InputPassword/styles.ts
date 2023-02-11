@@ -5,11 +5,8 @@ export const Input = styled.TextInput`
     display: flex;
     width: 100%;
     height: 46px;
-    /* border: 1px solid ${theme.colors.primary}; */
-    border: none;
     border-radius: 8px;
-    color: ${theme.colors.textColorBlack};
-    /* background: ${theme.colors.bgInput}; */
+    color: ${theme.colors.textColorWhite};
     padding: 10px 10px;
     font-size: 18px;
   `}
@@ -17,9 +14,9 @@ export const Input = styled.TextInput`
 
 export const Label = styled.Text`
   ${({ theme }) => css`
-    width: 68%;
+    margin-left: 8px;
     margin-bottom: 8px;
-    font-size: 18px;
+    font-size: 16px;
     color: ${theme.colors.textColorWhite};
   `}
 `;
@@ -27,19 +24,20 @@ export const Label = styled.Text`
 export const Container = styled.View`
   display: flex;
 `;
+
 export const ContainerInput = styled.View`
   ${({ theme }) => css`
     display: flex;
     flex-direction: row;
-    width: 60%;
+    width: 70%;
     border-radius: 8px;
     align-items: center;
-    background: ${theme.colors.bgInput};
+    border-bottom-width: 2px;
+    border-bottom-color: ${theme.colors.primary};
   `}
 `;
 
 export const Icon = styled.TouchableOpacity`
   width: 15%;
   justify-content: center;
-  align-items: center;
 `;

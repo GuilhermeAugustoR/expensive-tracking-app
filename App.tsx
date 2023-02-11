@@ -1,4 +1,4 @@
-import { StatusBar } from "react-native";
+import { StatusBar, View } from "react-native";
 import React from "react";
 import Routes from "./routes";
 import { LogBox } from "react-native";
@@ -6,6 +6,7 @@ import { LogBox } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Theme } from "./src/template/theme";
+import ExpensiveContextProvider from "./src/context/expensiveContext";
 
 LogBox.ignoreLogs(["EventEmitter.removeListener"]);
 
@@ -15,10 +16,12 @@ const App = () => {
   return (
     <NavigationContainer>
       <SafeAreaProvider>
-        <StatusBar barStyle="light-content" />
-        <Theme>
-          <Routes />
-        </Theme>
+        <ExpensiveContextProvider>
+          <StatusBar barStyle="light-content" />
+          <Theme>
+            <Routes />
+          </Theme>
+        </ExpensiveContextProvider>
       </SafeAreaProvider>
     </NavigationContainer>
   );

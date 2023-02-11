@@ -6,9 +6,9 @@ const windowHeight = Dimensions.get("window").height;
 export default {
   colors: {
     bg: "#100F0F",
-    primary: "#3E065F",
+    primary: "#8E05C2",
     textColorWhite: "#ffffff",
-    textColorBlack: "#333",
+    textColorBlack: "#000",
     bgInput: "#AAB4BE",
   },
   window: {

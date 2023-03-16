@@ -1,6 +1,11 @@
 import styled, { css } from "styled-components/native";
 
-export const StyledButton = styled.TouchableOpacity`
+export const ContainerButton = styled.TouchableOpacity`
+  display: flex;
+  width: 300px;
+`;
+
+export const StyledButton = styled.View`
   ${({ theme }) => css`
     background: ${theme.colors.primary};
     align-self: center;
@@ -12,11 +17,6 @@ export const StyledButton = styled.TouchableOpacity`
       background-color: #747e85;
     }
   `}
-`;
-
-export const ContainerButton = styled.View`
-  display: flex;
-  width: 300px;
 `;
 
 export const TextButton = styled.Text`

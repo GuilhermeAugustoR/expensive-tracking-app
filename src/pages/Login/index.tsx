@@ -5,9 +5,11 @@ import Button from "../../components/Button";
 import Input from "../../components/Input";
 import InputPassword from "../../components/InputPassword";
 import * as Styled from "./styles";
+import { ExpensiveContext } from "../../context/expensiveContext";
 
 const Login = () => {
   const animation = React.useRef(null);
+  const { setLogin } = React.useContext(ExpensiveContext);
   const [user, setUser] = React.useState<string>("");
   const [password, setPassword] = React.useState<string>("");
 
@@ -63,7 +65,7 @@ const Login = () => {
             </Styled.ContainerInput>
 
             <Styled.ContainerButton>
-              <Button title="Entrar" />
+              <Button title="Entrar" onPress={() => setLogin(true)} />
             </Styled.ContainerButton>
 
             <Styled.ContainerSignUp>

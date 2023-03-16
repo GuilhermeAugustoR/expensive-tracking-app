@@ -1,13 +1,15 @@
 import React from "react";
+import { GestureResponderEvent } from "react-native";
 import { ContainerButton, StyledButton, TextButton } from "./styles";
 
 interface IButton {
   title: string;
+  onPress: (event: GestureResponderEvent) => void;
 }
 
-const Button = ({ title }: IButton) => {
+const Button = ({ title, onPress }: IButton) => {
   return (
-    <ContainerButton>
+    <ContainerButton onPress={onPress}>
       <StyledButton>
         <TextButton>{title}</TextButton>
       </StyledButton>

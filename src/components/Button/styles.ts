@@ -23,6 +23,6 @@ export const TextButton = styled.Text`
   ${({ theme }) => css`
     font-size: 16px;
     align-self: center;
-    color: ${theme.colors.textColorWhite};
+    color: ${theme.colors.textPrimary};
   `}
 `;

@@ -6,6 +6,8 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import Home from "./src/pages/Home";
 import Login from "./src/pages/Login";
 import { ExpensiveContext } from "./src/context/expensiveContext";
+import Expense from "./src/pages/Expense";
+import AccountStatent from "./src/pages/AccountStatent";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -29,6 +31,30 @@ function StacksLogin() {
       }}
     >
       <Stack.Screen name="Login" component={Login} />
+    </Stack.Navigator>
+  );
+}
+
+function StacksExpense() {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <Stack.Screen name="Expense" component={Expense} />
+    </Stack.Navigator>
+  );
+}
+
+function StacksAccountStatent() {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <Stack.Screen name="AccountStatent" component={AccountStatent} />
     </Stack.Navigator>
   );
 }
@@ -73,6 +99,34 @@ export default function Routes() {
                 }
 
                 return <Ionicons name="home" size={25} color={color} />;
+              },
+            }}
+          />
+
+          <Tab.Screen
+            name="Expense"
+            component={StacksExpense}
+            options={{
+              tabBarIcon: ({ color, focused }) => {
+                if (focused) {
+                  return <Ionicons name="reader" size={25} color={color} />;
+                }
+
+                return <Ionicons name="reader" size={25} color={color} />;
+              },
+            }}
+          />
+
+          <Tab.Screen
+            name="StacksAccountStatent"
+            component={StacksAccountStatent}
+            options={{
+              tabBarIcon: ({ color, focused }) => {
+                if (focused) {
+                  return <Ionicons name="wallet" size={25} color={color} />;
+                }
+
+                return <Ionicons name="wallet" size={25} color={color} />;
               },
             }}
           />

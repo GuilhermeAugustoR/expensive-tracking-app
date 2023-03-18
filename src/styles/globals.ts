@@ -7,8 +7,9 @@ export default {
   colors: {
     bg: "#100F0F",
     primary: "#8E05C2",
-    textColorWhite: "#ffffff",
-    textColorBlack: "#000",
+    textPrimary: "#ffffff",
+    textBlack: "#000",
+    textSubtitle: "#BCBCBC",
     bgInput: "#AAB4BE",
   },
   window: {

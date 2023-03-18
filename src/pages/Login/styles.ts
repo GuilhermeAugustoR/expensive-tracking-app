@@ -44,7 +44,7 @@ export const Divider = styled.View`
 export const Title = styled.Text`
   ${({ theme }) => css`
     font-size: 22px;
-    color: ${theme.colors.textColorWhite};
+    color: ${theme.colors.textPrimary};
     text-align: center;
   `}
 `;
@@ -63,7 +63,7 @@ export const ButtonForgotPassword = styled.TouchableOpacity`
 export const TitleForgotPassword = styled.Text`
   ${({ theme }) => css`
     font-size: 16px;
-    color: ${theme.colors.textColorWhite};
+    color: ${theme.colors.textPrimary};
     text-decoration-line: underline;
     margin-top: 20px;
   `}
@@ -86,7 +86,7 @@ export const ContainerSignUp = styled.View`
 export const TitleSignUp = styled.Text`
   ${({ theme }) => css`
     font-size: 18px;
-    color: ${theme.colors.textColorWhite};
+    color: ${theme.colors.textPrimary};
     opacity: 0.7;
     margin-bottom: 10px;
   `}
@@ -99,7 +99,7 @@ export const ButtonSignUp = styled.TouchableOpacity`
 export const TextSignUp = styled.Text`
   ${({ theme }) => css`
     font-size: 18px;
-    color: ${theme.colors.textColorWhite};
+    color: ${theme.colors.textPrimary};
     text-decoration-line: underline;
   `}
 `;

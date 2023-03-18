@@ -6,6 +6,7 @@ import Input from "../../components/Input";
 import InputPassword from "../../components/InputPassword";
 import * as Styled from "./styles";
 import { ExpensiveContext } from "../../context/expensiveContext";
+import Divider from "../../components/Divider";
 
 const Login = () => {
   const animation = React.useRef(null);
@@ -45,7 +46,7 @@ const Login = () => {
                 }}
               />
 
-              <Styled.Divider />
+              <Divider />
 
               <Styled.ContainerInputPassword>
                 <InputPassword

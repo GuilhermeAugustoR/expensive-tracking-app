@@ -35,12 +35,6 @@ export const ContainerInput = styled.View`
   align-items: center;
 `;
 
-export const Divider = styled.View`
-  display: flex;
-  width: 100%;
-  height: 16%;
-`;
-
 export const Title = styled.Text`
   ${({ theme }) => css`
     font-size: 22px;

@@ -1,5 +1,9 @@
 import styled, { css } from "styled-components/native";
 
+interface IContainer {
+  isComplete: boolean;
+}
+
 export const Inputs = styled.TextInput`
   ${({ theme }) => css`
     display: flex;
@@ -27,5 +31,5 @@ export const Label = styled.Text`
 
 export const Container = styled.View`
   display: flex;
-  width: 80%;
+  width: ${(props: IContainer) => (props.isComplete ? "100%" : "80%")};
 `;

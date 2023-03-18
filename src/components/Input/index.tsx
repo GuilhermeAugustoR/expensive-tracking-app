@@ -7,11 +7,12 @@ interface IInput {
   onChange: (e: NativeSyntheticEvent<TextInputChangeEventData>) => void;
   placeholder?: string;
   label?: string;
+  isComplete?: boolean | any;
 }
 
-const Input = ({ value, onChange, placeholder, label }: IInput) => {
+const Input = ({ value, onChange, placeholder, label, isComplete }: IInput) => {
   return (
-    <Container>
+    <Container isComplete={isComplete}>
       <Label>{label}</Label>
       <Inputs
         value={value}

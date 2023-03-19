@@ -8,9 +8,17 @@ interface IInput {
   placeholder?: string;
   label?: string;
   isComplete?: boolean | any;
+  keyboardType?: string | any;
 }
 
-const Input = ({ value, onChange, placeholder, label, isComplete }: IInput) => {
+const Input = ({
+  value,
+  onChange,
+  placeholder,
+  label,
+  isComplete,
+  keyboardType,
+}: IInput) => {
   return (
     <Container isComplete={isComplete}>
       <Label>{label}</Label>
@@ -19,6 +27,7 @@ const Input = ({ value, onChange, placeholder, label, isComplete }: IInput) => {
         onChange={onChange}
         placeholder={placeholder}
         placeholderTextColor="#ffffff61"
+        keyboardType={keyboardType ? keyboardType : "default"}
       />
     </Container>
   );

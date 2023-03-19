@@ -13,7 +13,7 @@ export const Container = styled.View`
     width: 95%;
     height: ${theme.window.heigth};
     align-self: center;
-    margin-top: 60px;
+    margin-top: 50px;
   `}
 `;
 

@@ -8,6 +8,7 @@ import Login from "./src/pages/Login";
 import { ExpensiveContext } from "./src/context/expensiveContext";
 import Expense from "./src/pages/Expense";
 import AccountStatent from "./src/pages/AccountStatent";
+import Transactions from "./src/pages/Transactions";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -35,13 +36,14 @@ function StacksLogin() {
   );
 }
 
-function StacksExpense() {
+function StacksTransactions() {
   return (
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
       }}
     >
+      <Stack.Screen name="Transactions" component={Transactions} />
       <Stack.Screen name="Expense" component={Expense} />
     </Stack.Navigator>
   );
@@ -104,8 +106,8 @@ export default function Routes() {
           />
 
           <Tab.Screen
-            name="Expense"
-            component={StacksExpense}
+            name="Transactions"
+            component={StacksTransactions}
             options={{
               tabBarIcon: ({ color, focused }) => {
                 if (focused) {

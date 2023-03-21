@@ -11,6 +11,8 @@ export default {
     textBlack: "#000",
     textSubtitle: "#BCBCBC",
     bgInput: "#AAB4BE",
+    success: "#05c28e",
+    error: "#F54336",
   },
   window: {
     width: windowWidth,

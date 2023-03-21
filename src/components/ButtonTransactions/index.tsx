@@ -3,7 +3,7 @@ import { GestureResponderEvent } from "react-native";
 import * as Styled from "./styles";
 
 interface IButtonTransactions {
-  title: string;
+  title: any;
   onPress: (event: GestureResponderEvent) => void;
   isColored?: boolean | any;
 }

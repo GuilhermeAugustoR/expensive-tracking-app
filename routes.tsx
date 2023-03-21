@@ -6,9 +6,10 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import Home from "./src/pages/Home";
 import Login from "./src/pages/Login";
 import { ExpensiveContext } from "./src/context/expensiveContext";
-import Expense from "./src/pages/Expense";
+import Expense from "./src/pages/Transactions/Expense";
 import AccountStatent from "./src/pages/AccountStatent";
 import Transactions from "./src/pages/Transactions";
+import Income from "./src/pages/Transactions/Income";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -45,6 +46,7 @@ function StacksTransactions() {
     >
       <Stack.Screen name="Transactions" component={Transactions} />
       <Stack.Screen name="Expense" component={Expense} />
+      <Stack.Screen name="Income" component={Income} />
     </Stack.Navigator>
   );
 }

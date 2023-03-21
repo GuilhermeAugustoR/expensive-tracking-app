@@ -13,14 +13,18 @@ export const Container = styled.View`
     width: 95%;
     height: ${theme.window.heigth};
     align-self: center;
-    margin-top: 50px;
+    margin-top: 20px;
   `}
+`;
+
+export const ContainerHeader = styled.View`
+  display: flex;
+  margin-top: 10px;
 `;
 
 export const ContainerButton = styled.View`
   display: flex;
-  flex: 1;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  margin-bottom: 80px;
+  height: 26%;
 `;

@@ -1,13 +1,15 @@
 import React from "react";
-import { useNavigation } from "@react-navigation/native";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
 import * as Styled from "./styles";
 import { LinearGradient } from "expo-linear-gradient";
 import HeaderTitle from "../../components/HeaderTitle";
-import Button from "../../components/Button";
 import Divider from "../../components/Divider";
 import ButtonTransactions from "../../components/ButtonTransactions";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 const Transactions = () => {
+  const navigation: NavigationProp<any> = useNavigation();
+
   return (
     <Styled.SafeArea>
       <LinearGradient
@@ -22,11 +24,28 @@ const Transactions = () => {
           />
 
           <Styled.ContainerButton>
-            <ButtonTransactions title="Receita" onPress={() => {}} isColored={true}/>
+            <ButtonTransactions
+              title={
+                <>
+                  Receitas{" "}
+                  <Ionicons name="arrow-up-outline" size={25} color="white" />
+                </>
+              }
+              onPress={() => navigation.navigate("Income")}
+              isColored={true}
+            />
 
             <Divider />
 
-            <ButtonTransactions title="Despesas" onPress={() => {}} />
+            <ButtonTransactions
+              title={
+                <>
+                  Despesas{" "}
+                  <Ionicons name="arrow-down-outline" size={25} color="white" />
+                </>
+              }
+              onPress={() => navigation.navigate("Expense")}
+            />
           </Styled.ContainerButton>
         </Styled.Container>
       </LinearGradient>

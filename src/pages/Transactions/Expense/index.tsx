@@ -2,12 +2,18 @@ import React from "react";
 import { Keyboard, TouchableWithoutFeedback } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
-import { Container, ContainerButton, SafeArea } from "./styles";
-import Input from "../../components/Input";
-import HeaderTitle from "../../components/HeaderTitle";
-import Divider from "../../components/Divider";
-import Button from "../../components/Button";
-import InputDropdown from "../../components/InputDropdown";
+import Input from "../../../components/Input";
+import HeaderTitle from "../../../components/HeaderTitle";
+import Divider from "../../../components/Divider";
+import Button from "../../../components/Button";
+import InputDropdown from "../../../components/InputDropdown";
+import Header from "../../../components/Header";
+import {
+  Container,
+  ContainerButton,
+  ContainerHeader,
+  SafeArea,
+} from "./styles";
 
 const Expense = () => {
   const navigation = useNavigation();
@@ -43,10 +49,14 @@ const Expense = () => {
           start={{ x: 0.5, y: 0.5 }}
           end={{ x: 1, y: 1 }}
         >
-          <HeaderTitle
-            title="Gastos"
-            subtitle="Aqui você adiciona todo o seu gasto mensal para poder ter um controle melhor sobre ele"
-          />
+          <Header />
+          <ContainerHeader>
+            <HeaderTitle
+              title="Despesas"
+              subtitle="Aqui você adiciona toda a sua despesa mensal para poder ter um controle melhor sobre ele"
+            />
+          </ContainerHeader>
+
           <Container>
             <InputDropdown
               open={open}

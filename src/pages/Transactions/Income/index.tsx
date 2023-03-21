@@ -59,6 +59,18 @@ const Income = () => {
           <Container>
             <Input
               isComplete
+              label="Descrição"
+              placeholder="Coloque a descrição da receita"
+              value={description}
+              onChange={(e) => {
+                setDescription(e.nativeEvent.text);
+              }}
+            />
+
+            <Divider />
+
+            <Input
+              isComplete
               label="Valor"
               placeholder="Digite o valor do produto"
               keyboardType="numeric"
@@ -70,7 +82,7 @@ const Income = () => {
 
             <Divider />
             <ContainerButton>
-              <Button title="Adicionar" onPress={() => {}} />
+              <Button title="Adicionar" onPress={() => {}} isColorAdd />
             </ContainerButton>
           </Container>
         </LinearGradient>

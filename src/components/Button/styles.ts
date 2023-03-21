@@ -1,5 +1,10 @@
 import styled, { css } from "styled-components/native";
 
+interface IButton {
+  isAdd?: boolean;
+  isLogin?: any;
+}
+
 export const ContainerButton = styled.TouchableOpacity`
   display: flex;
   width: 300px;
@@ -7,7 +12,12 @@ export const ContainerButton = styled.TouchableOpacity`
 
 export const StyledButton = styled.View`
   ${({ theme }) => css`
-    background: ${theme.colors.primary};
+    background: ${(props: IButton) =>
+      props.isLogin
+        ? `${theme.colors.primary}`
+        : props.isAdd
+        ? `${theme.colors.success}`
+        : `${theme.colors.error}`};
     align-self: center;
     justify-content: center;
     border-radius: 12%;
@@ -22,6 +32,7 @@ export const StyledButton = styled.View`
 export const TextButton = styled.Text`
   ${({ theme }) => css`
     font-size: 16px;
+    font-weight: 700;
     align-self: center;
     color: ${theme.colors.textPrimary};
   `}

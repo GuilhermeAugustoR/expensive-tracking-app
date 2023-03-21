@@ -14,6 +14,7 @@ import {
   ContainerHeader,
   SafeArea,
 } from "./styles";
+import InputDropdownMonth from "../../../components/InputDropdownMonth";
 
 const Expense = () => {
   const navigation = useNavigation();
@@ -23,6 +24,9 @@ const Expense = () => {
   //Dropdown
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState(null);
+
+  const [openMonth, setOpenMonth] = React.useState(false);
+  const [valueMonth, setValueMonth] = React.useState(null);
 
   function Formatar(valor: any) {
     const v = ((valor.replace(/\D/g, "") / 100).toFixed(2) + "").split(".");
@@ -75,6 +79,15 @@ const Expense = () => {
               onChange={(e) => {
                 setDescription(e.nativeEvent.text);
               }}
+            />
+
+            <Divider />
+
+            <InputDropdownMonth
+              open={openMonth}
+              value={valueMonth}
+              setOpen={setOpenMonth}
+              setValue={setValueMonth}
             />
 
             <Divider />

@@ -66,7 +66,7 @@ const Login = () => {
             </Styled.ContainerInput>
 
             <Styled.ContainerButton>
-              <Button title="Entrar" onPress={() => setLogin(true)} />
+              <Button title="Entrar" onPress={() => setLogin(true)} isLogin />
             </Styled.ContainerButton>
 
             <Styled.ContainerSignUp>

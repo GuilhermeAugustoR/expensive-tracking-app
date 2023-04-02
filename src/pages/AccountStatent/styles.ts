@@ -24,7 +24,7 @@ export const ContainerHeader = styled.View`
 export const ContainerTotalTransactions = styled.View`
   display: flex;
   width: 100%;
-  height: 35%;
+  height: 30%;
 `;
 
 export const SubContainerTotalTransactions = styled.View`
@@ -119,4 +119,13 @@ export const BodyIncome = styled.Text`
   color: white;
   font-size: 18px;
   font-weight: 500;
+`;
+
+export const ContainerExtract = styled.View`
+  ${({ theme }) => css`
+    display: flex;
+    width: 100%;
+    height: 38%;
+    margin-top: 30px;
+  `}
 `;
